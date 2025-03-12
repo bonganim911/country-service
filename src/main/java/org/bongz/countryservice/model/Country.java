@@ -47,28 +47,4 @@ public class Country {
     public String getCapital() {
         return capital;
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setFlag(String flag) {
-        this.flag = flag;
-    }
-
-    public void setPopulation(int population) {
-        this.population = population;
-    }
-
-    public void setCapital(String capital) {
-        this.capital = capital;
-    }
 }

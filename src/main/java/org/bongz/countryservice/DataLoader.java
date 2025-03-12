@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 
-@Profile("!test") // Disable this component during tests
+@Profile("dev") // Disable this component during tests
 @Component
 public class DataLoader implements ApplicationRunner {
 
