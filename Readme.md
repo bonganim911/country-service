@@ -102,7 +102,7 @@ Codecov Below Results and [report is available here](https://app.codecov.io/gith
 - When running the application go to [http://localhost:8081/swagger-ui/index.html#/](http://localhost:8081/swagger-ui/index.html#/).
 - API docs [http://localhost:8081/v3/api-docs](http://localhost:8081/v3/api-docs).
 
-![Swagger-UI](https://github.com/bonganim911/conferenceBookingService/blob/main/Swagger-UI.png)
+![Swagger-UI](https://github.com/bonganim911/country-service/blob/main/Swagger-UI.png)
 
 # Trade-Off
 - Build this application using Service-Centric having plain DTO's that don't hold behaviour, and doesn't hold complex domains or rich models.
