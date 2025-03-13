@@ -36,7 +36,7 @@ public class CountryControllerTest {
 
         when(countryService.getAllCountries()).thenReturn(mockCountries);
 
-        mockMvc.perform(get("/countries"))
+        mockMvc.perform(get("/api/countries"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].name").value("USA"))
                 .andExpect(jsonPath("$[2].name").value("South Africa"));
@@ -53,7 +53,7 @@ public class CountryControllerTest {
 
         when(countryService.getCountryDetails(countryName)).thenReturn(Optional.of(mockCountryDetailsDTO));
 
-        mockMvc.perform(get("/countries/"+countryName))
+        mockMvc.perform(get("/api/countries/"+countryName))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.capital").value(countryCapital));
 
@@ -70,7 +70,7 @@ public class CountryControllerTest {
 
         when(countryService.getCountryDetails(countryName)).thenReturn(Optional.of(mockCountryDetailsDTO));
 
-        mockMvc.perform(get("/countries/"+countryName))
+        mockMvc.perform(get("/api/countries/"+countryName))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.capital").value(countryCapital));
 
@@ -82,7 +82,7 @@ public class CountryControllerTest {
 
         when(countryService.getCountryDetails(countryName)).thenReturn(Optional.empty());
 
-        mockMvc.perform(get("/countries/"+countryName))
+        mockMvc.perform(get("/api/countries/"+countryName))
                 .andExpect(status().isNotFound());
 
     }

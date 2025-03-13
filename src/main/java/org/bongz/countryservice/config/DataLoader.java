@@ -1,4 +1,4 @@
-package org.bongz.countryservice;
+package org.bongz.countryservice.config;
 
 import org.bongz.countryservice.model.ApiCountry;
 import org.bongz.countryservice.model.Country;
@@ -26,7 +26,7 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         // Fetch data from the external API
-        ApiCountry[] apiCountries = restTemplate.getForObject("https://restcountries.com/v3.1/all", ApiCountry[].class);
+        ApiCountry[]  apiCountries = restTemplate.getForObject("https://restcountries.com/v3.1/all", ApiCountry[].class);
 
         if (apiCountries != null) {
             // Save data to the database
