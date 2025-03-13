@@ -8,8 +8,8 @@ import java.util.List;
 @Data
 public class ApiCountry {
     private Name name;
+    private Flags flags; // This should map to the "flags" object in the JSON
     private List<String> capital;
-    private String flag;
     private int population;
 
     @Data
@@ -22,6 +22,30 @@ public class ApiCountry {
         }
     }
 
+    @Data
+    public static class Flags {
+        @JsonProperty("png")
+        private String png; // Maps to the "png" field in the "flags" object
+
+        @JsonProperty("svg")
+        private String svg; // Maps to the "svg" field in the "flags" object
+
+        @JsonProperty("alt")
+        private String alt; // Maps to the "alt" field in the "flags" object
+
+        public String getPng() {
+            return png;
+        }
+
+        public String getSvg() {
+            return svg;
+        }
+
+        public String getAlt() {
+            return alt;
+        }
+    }
+
     public Name getName() {
         return name;
     }
@@ -30,8 +54,8 @@ public class ApiCountry {
         return capital;
     }
 
-    public String getFlag() {
-        return flag;
+    public Flags getFlags() { // Renamed from getFlag() to getFlags()
+        return flags;
     }
 
     public int getPopulation() {

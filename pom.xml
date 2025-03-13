@@ -122,20 +122,13 @@
                 <configuration>
                     <excludes>
                         <!-- Exclude DataLoader class -->
-                        <exclude>**/DataLoader.*</exclude>
+                        <exclude>**/config/**</exclude>
                         <!-- Exclude CountryServiceApplication class -->
                         <exclude>**/CountryServiceApplication.*</exclude>
                         <!-- Exclude ApiCountry, inner name class -->
                         <exclude>**/model/ApiCountry$Name.class</exclude>
+                        <exclude>**/model/ApiCountry$Flags.class</exclude>
                         <exclude>**/model/ApiCountry.**</exclude>
-                        <!-- Exclude All below since jcoco was instrumenting all this classes-->
-                        <exclude>java/net/http/HttpClient</exclude>
-                        <exclude>java/**</exclude>
-                        <exclude>javax/**</exclude>
-                        <exclude>jdk/**</exclude>
-                        <exclude>org/**</exclude>
-                        <exclude>sun/**</exclude>
-                        <exclude>com/**</exclude>
                     </excludes>
                 </configuration>
             </plugin>

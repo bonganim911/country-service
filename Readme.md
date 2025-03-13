@@ -123,8 +123,9 @@ Codecov Below Results and [report is available here](https://app.codecov.io/gith
 - Use of H2 in-memory db
     - For testing purposes, but it has memory usage and it consumes RAM. Working with large datasets, this could ne a bottleneck.
 - Jcoco
-  - Excluded some internal files that jcoco was instrumenting them, and again it was maybe it is not supporting Java 23. 
-  - Did want to spend time to downgrade upgraded Jcoco though.
+  - Exclude config files, some could have written a test DataLoader.
+- SL4j Logger
+  - Didn't integrate the logger  
 
 
 
